@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "name": "Organic Fertilizer",
+    "price": "₹500",
+    "description": "High-quality organic fertilizer for healthy plant growth.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 2,
+    "name": "Premium Seeds",
+    "price": "₹300",
+    "description": "High-yield seeds for a variety of crops.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Seeds"
+  },
+  {
+    "id": 3,
+    "name": "Irrigation System",
+    "price": "₹1500",
+    "description": "Efficient irrigation system to save water and enhance crop yield.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Irrigation"
+  },
+  {
+    "id": 4,
+    "name": "Pesticide",
+    "price": "₹700",
+    "description": "Effective pesticide for pest control.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Pesticides"
+  },
+  {
+    "id": 5,
+    "name": "Tractor",
+    "price": "₹200000",
+    "description": "Heavy-duty tractor for large-scale farming.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Machinery"
+  },
+  {
+    "id": 6,
+    "name": "Plow",
+    "price": "₹15000",
+    "description": "Durable plow for soil preparation.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 7,
+    "name": "Harvesting Machine",
+    "price": "₹250000",
+    "description": "Efficient harvesting machine for various crops.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Machinery"
+  },
+  {
+    "id": 8,
+    "name": "Greenhouse",
+    "price": "₹80000",
+    "description": "Portable greenhouse for controlled environment farming.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Greenhouses"
+  },
+  {
+    "id": 9,
+    "name": "Compost",
+    "price": "₹350",
+    "description": "Natural compost for enriching soil.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 10,
+    "name": "Soil Test Kit",
+    "price": "₹200",
+    "description": "Kit for testing soil quality and nutrients.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 11,
+    "name": "Plant Sprayer",
+    "price": "₹150",
+    "description": "Handheld sprayer for plants and crops.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 12,
+    "name": "Garden Tools Set",
+    "price": "₹1200",
+    "description": "Comprehensive set of garden tools.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 13,
+    "name": "Seedling Tray",
+    "price": "₹250",
+    "description": "Tray for growing seedlings.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Seeds"
+  },
+  {
+    "id": 14,
+    "name": "Shade Net",
+    "price": "₹500",
+    "description": "Shade net to protect plants from excessive sunlight.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 15,
+    "name": "Organic Pesticide",
+    "price": "₹600",
+    "description": "Eco-friendly pesticide for pest control.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Pesticides"
+  },
+  {
+    "id": 16,
+    "name": "Water Pump",
+    "price": "₹12000",
+    "description": "High-efficiency water pump for irrigation.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Irrigation"
+  },
+  {
+    "id": 17,
+    "name": "Agricultural Drone",
+    "price": "₹400000",
+    "description": "Drone for monitoring and managing crops.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Machinery"
+  },
+  {
+    "id": 18,
+    "name": "Crop Rotation Software",
+    "price": "₹7000",
+    "description": "Software for managing crop rotation schedules.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Software"
+  },
+  {
+    "id": 19,
+    "name": "Soil Moisture Sensor",
+    "price": "₹3000",
+    "description": "Sensor for monitoring soil moisture levels.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 20,
+    "name": "Farm Management Software",
+    "price": "₹15000",
+    "description": "Comprehensive software for farm management.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Software"
+  },
+  {
+    "id": 21,
+    "name": "Vegetable Seeds",
+    "price": "₹200",
+    "description": "Seeds for various vegetables.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Seeds"
+  },
+  {
+    "id": 22,
+    "name": "Fruit Tree Saplings",
+    "price": "₹400",
+    "description": "Saplings for fruit trees.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Seeds"
+  },
+  {
+    "id": 23,
+    "name": "Bio-Fertilizer",
+    "price": "₹600",
+    "description": "Bio-based fertilizer for sustainable farming.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 24,
+    "name": "Crop Protection Net",
+    "price": "₹800",
+    "description": "Net for protecting crops from pests and birds.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 25,
+    "name": "Plant Nutrients",
+    "price": "₹350",
+    "description": "Essential nutrients for plant growth.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 26,
+    "name": "Tiller",
+    "price": "₹25000",
+    "description": "Tiller for soil cultivation.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Machinery"
+  },
+  {
+    "id": 27,
+    "name": "Green Manure",
+    "price": "₹500",
+    "description": "Organic green manure for enriching soil.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 28,
+    "name": "Farm Irrigation Kit",
+    "price": "₹3000",
+    "description": "Complete kit for farm irrigation.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Irrigation"
+  },
+  {
+    "id": 29,
+    "name": "Garden Sprinkler",
+    "price": "₹800",
+    "description": "Sprinkler for watering gardens.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Irrigation"
+  },
+  {
+    "id": 30,
+    "name": "Soil Conditioner",
+    "price": "₹450",
+    "description": "Conditioner for improving soil structure.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Fertilizers"
+  },
+  {
+    "id": 31,
+    "name": "Organic Herbicide",
+    "price": "₹650",
+    "description": "Herbicide for controlling weeds organically.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Pesticides"
+  },
+  {
+    "id": 32,
+    "name": "Fertilizer Spreader",
+    "price": "₹1500",
+    "description": "Spreader for evenly distributing fertilizer.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 33,
+    "name": "Farm Safety Kit",
+    "price": "₹1000",
+    "description": "Safety kit for farm workers.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  },
+  {
+    "id": 34,
+    "name": "Drip Irrigation System",
+    "price": "₹2000",
+    "description": "Drip irrigation system for efficient water use.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Irrigation"
+  },
+  {
+    "id": 35,
+    "name": "Soil PH Tester",
+    "price": "₹500",
+    "description": "Tester for measuring soil pH levels.",
+    "image": "https://via.placeholder.com/150",
+    "category": "Tools"
+  }
+]

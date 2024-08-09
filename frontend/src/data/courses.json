@@ -1,0 +1,145 @@
+[
+    {
+      "id": "1",
+      "title": "Introduction to Organic Farming",
+      "description": "Learn the basics of organic farming, including soil health and pest management.",
+      "content": "Detailed content about organic farming...",
+      "videoIds": [
+        "your_youtube_video_id_1",
+        "your_youtube_video_id_2",
+        "your_youtube_video_id_3"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Advanced Crop Management",
+      "description": "Explore advanced techniques in crop management and increase your yield.",
+      "content": "Detailed content about crop management...",
+      "videoIds": [
+        "your_youtube_video_id_4",
+        "your_youtube_video_id_5",
+        "your_youtube_video_id_6"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Sustainable Irrigation Practices",
+      "description": "Understand sustainable irrigation practices and their impact on farming.",
+      "content": "Detailed content about irrigation practices...",
+      "videoIds": [
+        "your_youtube_video_id_7",
+        "your_youtube_video_id_8",
+        "your_youtube_video_id_9"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Soil Fertility Management",
+      "description": "Master techniques to maintain and improve soil fertility for sustainable farming.",
+      "content": "Detailed content about soil fertility management...",
+      "videoIds": [
+        "your_youtube_video_id_10",
+        "your_youtube_video_id_11",
+        "your_youtube_video_id_12"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Precision Agriculture",
+      "description": "Learn about modern precision agriculture techniques using advanced technology.",
+      "content": "Detailed content about precision agriculture...",
+      "videoIds": [
+        "your_youtube_video_id_13",
+        "your_youtube_video_id_14",
+        "your_youtube_video_id_15"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Agricultural Marketing",
+      "description": "Understand the essentials of agricultural marketing and improve your selling strategies.",
+      "content": "Detailed content about agricultural marketing...",
+      "videoIds": [
+        "your_youtube_video_id_16",
+        "your_youtube_video_id_17",
+        "your_youtube_video_id_18"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Pest and Disease Management",
+      "description": "Learn effective pest and disease management strategies to protect your crops.",
+      "content": "Detailed content about pest and disease management...",
+      "videoIds": [
+        "your_youtube_video_id_19",
+        "your_youtube_video_id_20",
+        "your_youtube_video_id_21"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Agroforestry Systems",
+      "description": "Discover the benefits of integrating trees and shrubs into your farming systems.",
+      "content": "Detailed content about agroforestry systems...",
+      "videoIds": [
+        "your_youtube_video_id_22",
+        "your_youtube_video_id_23",
+        "your_youtube_video_id_24"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Water Conservation Techniques",
+      "description": "Explore water conservation techniques to enhance your farm’s sustainability.",
+      "content": "Detailed content about water conservation...",
+      "videoIds": [
+        "your_youtube_video_id_25",
+        "your_youtube_video_id_26",
+        "your_youtube_video_id_27"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Farm Machinery and Equipment",
+      "description": "Gain knowledge about the latest farm machinery and equipment for efficient farming.",
+      "content": "Detailed content about farm machinery and equipment...",
+      "videoIds": [
+        "your_youtube_video_id_28",
+        "your_youtube_video_id_29",
+        "your_youtube_video_id_30"
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Climate-Smart Agriculture",
+      "description": "Learn about climate-smart agriculture practices to adapt to changing climates.",
+      "content": "Detailed content about climate-smart agriculture...",
+      "videoIds": [
+        "your_youtube_video_id_31",
+        "your_youtube_video_id_32",
+        "your_youtube_video_id_33"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Post-Harvest Management",
+      "description": "Master techniques for effective post-harvest management and reduce losses.",
+      "content": "Detailed content about post-harvest management...",
+      "videoIds": [
+        "your_youtube_video_id_34",
+        "your_youtube_video_id_35",
+        "your_youtube_video_id_36"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Animal Husbandry Basics",
+      "description": "Learn the basics of animal husbandry and best practices for livestock management.",
+      "content": "Detailed content about animal husbandry...",
+      "videoIds": [
+        "your_youtube_video_id_37",
+        "your_youtube_video_id_38",
+        "your_youtube_video_id_39"
+      ]
+    }
+  ]
