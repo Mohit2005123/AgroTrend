@@ -13,12 +13,15 @@ import {
 } from "@nextui-org/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../context/AuthContext";
 
 export default function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarStyle, setNavbarStyle] = useState({
     backgroundColor: "rgba(255, 255, 255, 1)",
   });
+
+  const { authUser } = useAuthContext(); // Use AuthContext to get the user info
 
   const links1 = [
     { name: "Market Insights", to: "/market-insights" },
@@ -28,6 +31,7 @@ export default function MyNavbar() {
     { name: "Activity", to: "/activity" },
     { name: "Logout", to: "/logout" },
   ];
+
   const links2 = [
     { name: "Home", to: "/" },
     { name: "Market Data", to: "/market-data", isActive: true },
@@ -37,7 +41,6 @@ export default function MyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      // Calculate transparency based on scroll position
       const opacity = Math.max(0.6, 1 - scrollTop / 200);
       setNavbarStyle({
         backgroundColor: `rgba(255, 255, 255, ${opacity})`,
@@ -110,49 +113,64 @@ export default function MyNavbar() {
 
         {/* User Avatar and Dropdown Menu */}
         <NavbarContent as="div" justify="end" className="hidden sm:flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <p className="text-lg font-semibold">Mohit Mongia</p>
-            <Dropdown placement="bottom-end">
-              <DropdownTrigger>
-                <Avatar
-                  isBordered
-                  as="button"
-                  className="transition-transform"
-                  color="secondary"
-                  name="Mohit Mongia"
-                  size="md"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
-              </DropdownTrigger>
-              <DropdownMenu aria-label="Profile Actions" variant="flat">
-                <DropdownItem key="profile" className="h-14 gap-2 text-lg">
-                  <p className="font-semibold">Signed in as</p>
-                  <p className="font-semibold">mohitmongia2005@gmail.com</p>
-                </DropdownItem>
-                <DropdownItem key="settings" className="text-lg">
-                  My Settings
-                </DropdownItem>
-                <DropdownItem key="team_settings" className="text-lg">
-                  Team Settings
-                </DropdownItem>
-                <DropdownItem key="analytics" className="text-lg">
-                  Analytics
-                </DropdownItem>
-                <DropdownItem key="system" className="text-lg">
-                  System
-                </DropdownItem>
-                <DropdownItem key="configurations" className="text-lg">
-                  Configurations
-                </DropdownItem>
-                <DropdownItem key="help_and_feedback" className="text-lg">
-                  Help & Feedback
-                </DropdownItem>
-                <DropdownItem key="logout" color="danger" className="text-lg">
-                  Log Out
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </div>
+          {authUser ? (
+            <div className="flex items-center space-x-2">
+              <p className="text-lg font-semibold">{authUser.name}</p>
+              <Dropdown placement="bottom-end">
+                <DropdownTrigger>
+                  <Avatar
+                    isBordered
+                    as="button"
+                    className="transition-transform"
+                    color="secondary"
+                    name={authUser.name}
+                    size="md"
+                    src={authUser.avatarUrl || "https://i.pravatar.cc/150?u=a042581f4e29026704d"}
+                  />
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Profile Actions" variant="flat">
+                  <DropdownItem key="profile" className="h-14 gap-2 text-lg">
+                    <p className="font-semibold">Signed in as</p>
+                    <p className="font-semibold">{authUser.email}</p>
+                  </DropdownItem>
+                  <DropdownItem key="settings" className="text-lg">
+                    My Settings
+                  </DropdownItem>
+                  <DropdownItem key="team_settings" className="text-lg">
+                    Team Settings
+                  </DropdownItem>
+                  <DropdownItem key="analytics" className="text-lg">
+                    Analytics
+                  </DropdownItem>
+                  <DropdownItem key="system" className="text-lg">
+                    System
+                  </DropdownItem>
+                  <DropdownItem key="configurations" className="text-lg">
+                    Configurations
+                  </DropdownItem>
+                  <DropdownItem key="help_and_feedback" className="text-lg">
+                    Help & Feedback
+                  </DropdownItem>
+                  <DropdownItem key="logout" color="danger" className="text-lg">
+                    Log Out
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            </div>
+          ) : (
+            <div className="flex space-x-4">
+              <Link to="/login">
+                <Button auto className="bg-blue-600 text-white">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button auto className="bg-green-600 text-white">
+                  Sign Up
+                </Button>
+              </Link>
+            </div>
+          )}
         </NavbarContent>
       </Navbar>
     </div>

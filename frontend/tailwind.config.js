@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const { nextui } = require("@nextui-org/react");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 module.exports = {
   content: [
@@ -9,11 +12,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
       animation: {
         wobble: 'wobble 1s ease-in-out',
         pulse: 'pulse 2s infinite',
         'fade-in': 'fade-in 1s ease-out',
-        'bounce': 'bounce 2s infinite',
+        bounce: 'bounce 2s infinite',
+        vortex: 'vortex 10s linear infinite', // Add vortex animation
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
@@ -47,6 +54,10 @@ module.exports = {
             animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
           },
         },
+        vortex: { // Define vortex keyframes
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animationDelay: {
         '1': '0.5s',
@@ -54,8 +65,26 @@ module.exports = {
         '3': '1.5s',
         '4': '2s',
       },
+      backgroundImage: {
+        'vortex': 'radial-gradient(circle, #000000 20%, transparent 70%)', // Define vortex background
+      },
     },
   },
-  plugins: [nextui()],
+  plugins: [nextui(), addVariablesForColors],
   darkMode: "class", // Enable dark mode support
+}
+
+function addVariablesForColors({ addBase, theme }) {
+  // Flatten the color palette from the theme
+  const allColors = flattenColorPalette(theme("colors"));
+  
+  // Create an object with CSS variable names as keys and corresponding color values
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  // Add the CSS variables to the :root selector
+  addBase({
+    ":root": newVars,
+  });
 }
