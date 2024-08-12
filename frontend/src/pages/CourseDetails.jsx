@@ -12,7 +12,6 @@ const CourseDetails = () => {
   if (!course) {
     return <p>Course not found.</p>;
   }
-
   return (
     <div>
       <MyNavbar /> {/* Add the Navbar */}

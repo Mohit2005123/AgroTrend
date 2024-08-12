@@ -12,15 +12,34 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        lightGreen: {
+          50: '#f2fbf5',
+          100: '#e6f8ea',
+          200: '#c2eecd',
+          300: '#9fe4af',
+          400: '#7bda92',
+          500: '#57d074',
+          600: '#45a35c',
+          700: '#337644',
+          800: '#22492c',
+          900: '#112413',
+        },
+        greenAccent: '#B2F5EA', // Accent color for highlighting
+      },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+        greenGlow: '0 0 10px 0 rgba(87, 208, 116, 0.5)', // Green glowing shadow
       },
       animation: {
         wobble: 'wobble 1s ease-in-out',
         pulse: 'pulse 2s infinite',
         'fade-in': 'fade-in 1s ease-out',
         bounce: 'bounce 2s infinite',
-        vortex: 'vortex 10s linear infinite', // Add vortex animation
+        vortex: 'vortex 10s linear infinite',
+        shake: 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+        blink: 'blink 1.5s infinite',
+        rotate: 'rotate 1s linear infinite', // Added rotate animation
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
@@ -54,9 +73,22 @@ module.exports = {
             animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
           },
         },
-        vortex: { // Define vortex keyframes
+        vortex: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        shake: {
+          '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+          '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+          '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+          '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+        },
+        blink: {
+          '50%': { opacity: '0' },
+        },
+        rotate: { // Define the rotate keyframes
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(180deg)' },
         },
       },
       animationDelay: {
@@ -66,7 +98,7 @@ module.exports = {
         '4': '2s',
       },
       backgroundImage: {
-        'vortex': 'radial-gradient(circle, #000000 20%, transparent 70%)', // Define vortex background
+        'vortex': 'radial-gradient(circle, #57d074 20%, transparent 70%)', // Updated light green vortex background
       },
     },
   },
