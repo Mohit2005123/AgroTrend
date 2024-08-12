@@ -19,6 +19,7 @@ const CourseDetails = () => {
       <div className="max-w-3xl mx-auto my-8 p-4 pt-24"> {/* Adjust the top padding */}
         <h1 className="text-4xl font-bold mb-4">{course.title}</h1>
         <p className="text-xl mb-4">{course.description}</p>
+        <p className="text-gray-500 mb-4">Language: {course.language}</p> {/* Display the language */}
         <div>
           <h2 className="text-2xl font-bold mb-2">Course Content</h2>
           <p>{course.content}</p>

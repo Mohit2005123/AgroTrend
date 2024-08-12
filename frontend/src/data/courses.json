@@ -1,145 +1,362 @@
 [
-    {
+  {
       "id": "1",
       "title": "Introduction to Organic Farming",
       "description": "Learn the basics of organic farming, including soil health and pest management.",
       "content": "Detailed content about organic farming...",
       "videoIds": [
-        "your_youtube_video_id_1",
-        "your_youtube_video_id_2",
-        "your_youtube_video_id_3"
-      ]
-    },
-    {
+          "your_youtube_video_id_1",
+          "your_youtube_video_id_2",
+          "your_youtube_video_id_3"
+      ],
+      "language": "Hindi"
+  },
+  {
       "id": "2",
       "title": "Advanced Crop Management",
       "description": "Explore advanced techniques in crop management and increase your yield.",
       "content": "Detailed content about crop management...",
       "videoIds": [
-        "your_youtube_video_id_4",
-        "your_youtube_video_id_5",
-        "your_youtube_video_id_6"
-      ]
-    },
-    {
+          "your_youtube_video_id_4",
+          "your_youtube_video_id_5",
+          "your_youtube_video_id_6"
+      ],
+      "language": "Marathi"
+  },
+  {
       "id": "3",
       "title": "Sustainable Irrigation Practices",
       "description": "Understand sustainable irrigation practices and their impact on farming.",
       "content": "Detailed content about irrigation practices...",
       "videoIds": [
-        "your_youtube_video_id_7",
-        "your_youtube_video_id_8",
-        "your_youtube_video_id_9"
-      ]
-    },
-    {
+          "your_youtube_video_id_7",
+          "your_youtube_video_id_8",
+          "your_youtube_video_id_9"
+      ],
+      "language": "Bengali"
+  },
+  {
       "id": "4",
       "title": "Soil Fertility Management",
       "description": "Master techniques to maintain and improve soil fertility for sustainable farming.",
       "content": "Detailed content about soil fertility management...",
       "videoIds": [
-        "your_youtube_video_id_10",
-        "your_youtube_video_id_11",
-        "your_youtube_video_id_12"
-      ]
-    },
-    {
+          "your_youtube_video_id_10",
+          "your_youtube_video_id_11",
+          "your_youtube_video_id_12"
+      ],
+      "language": "Gujarati"
+  },
+  {
       "id": "5",
       "title": "Precision Agriculture",
       "description": "Learn about modern precision agriculture techniques using advanced technology.",
       "content": "Detailed content about precision agriculture...",
       "videoIds": [
-        "your_youtube_video_id_13",
-        "your_youtube_video_id_14",
-        "your_youtube_video_id_15"
-      ]
-    },
-    {
+          "your_youtube_video_id_13",
+          "your_youtube_video_id_14",
+          "your_youtube_video_id_15"
+      ],
+      "language": "Tamil"
+  },
+  {
       "id": "6",
       "title": "Agricultural Marketing",
       "description": "Understand the essentials of agricultural marketing and improve your selling strategies.",
       "content": "Detailed content about agricultural marketing...",
       "videoIds": [
-        "your_youtube_video_id_16",
-        "your_youtube_video_id_17",
-        "your_youtube_video_id_18"
-      ]
-    },
-    {
+          "your_youtube_video_id_16",
+          "your_youtube_video_id_17",
+          "your_youtube_video_id_18"
+      ],
+      "language": "Telugu"
+  },
+  {
       "id": "7",
       "title": "Pest and Disease Management",
       "description": "Learn effective pest and disease management strategies to protect your crops.",
       "content": "Detailed content about pest and disease management...",
       "videoIds": [
-        "your_youtube_video_id_19",
-        "your_youtube_video_id_20",
-        "your_youtube_video_id_21"
-      ]
-    },
-    {
+          "your_youtube_video_id_19",
+          "your_youtube_video_id_20",
+          "your_youtube_video_id_21"
+      ],
+      "language": "Kannada"
+  },
+  {
       "id": "8",
       "title": "Agroforestry Systems",
       "description": "Discover the benefits of integrating trees and shrubs into your farming systems.",
       "content": "Detailed content about agroforestry systems...",
       "videoIds": [
-        "your_youtube_video_id_22",
-        "your_youtube_video_id_23",
-        "your_youtube_video_id_24"
-      ]
-    },
-    {
+          "your_youtube_video_id_22",
+          "your_youtube_video_id_23",
+          "your_youtube_video_id_24"
+      ],
+      "language": "Punjabi"
+  },
+  {
       "id": "9",
       "title": "Water Conservation Techniques",
       "description": "Explore water conservation techniques to enhance your farm’s sustainability.",
       "content": "Detailed content about water conservation...",
       "videoIds": [
-        "your_youtube_video_id_25",
-        "your_youtube_video_id_26",
-        "your_youtube_video_id_27"
-      ]
-    },
-    {
+          "your_youtube_video_id_25",
+          "your_youtube_video_id_26",
+          "your_youtube_video_id_27"
+      ],
+      "language": "Malayalam"
+  },
+  {
       "id": "10",
       "title": "Farm Machinery and Equipment",
       "description": "Gain knowledge about the latest farm machinery and equipment for efficient farming.",
       "content": "Detailed content about farm machinery and equipment...",
       "videoIds": [
-        "your_youtube_video_id_28",
-        "your_youtube_video_id_29",
-        "your_youtube_video_id_30"
-      ]
-    },
-    {
+          "your_youtube_video_id_28",
+          "your_youtube_video_id_29",
+          "your_youtube_video_id_30"
+      ],
+      "language": "Assamese"
+  },
+  {
       "id": "11",
       "title": "Climate-Smart Agriculture",
       "description": "Learn about climate-smart agriculture practices to adapt to changing climates.",
       "content": "Detailed content about climate-smart agriculture...",
       "videoIds": [
-        "your_youtube_video_id_31",
-        "your_youtube_video_id_32",
-        "your_youtube_video_id_33"
-      ]
-    },
-    {
+          "your_youtube_video_id_31",
+          "your_youtube_video_id_32",
+          "your_youtube_video_id_33"
+      ],
+      "language": "Odia"
+  },
+  {
       "id": "12",
       "title": "Post-Harvest Management",
       "description": "Master techniques for effective post-harvest management and reduce losses.",
       "content": "Detailed content about post-harvest management...",
       "videoIds": [
-        "your_youtube_video_id_34",
-        "your_youtube_video_id_35",
-        "your_youtube_video_id_36"
-      ]
-    },
-    {
+          "your_youtube_video_id_34",
+          "your_youtube_video_id_35",
+          "your_youtube_video_id_36"
+      ],
+      "language": "Sanskrit"
+  },
+  {
       "id": "13",
       "title": "Animal Husbandry Basics",
       "description": "Learn the basics of animal husbandry and best practices for livestock management.",
       "content": "Detailed content about animal husbandry...",
       "videoIds": [
-        "your_youtube_video_id_37",
-        "your_youtube_video_id_38",
-        "your_youtube_video_id_39"
-      ]
-    }
-  ]
+          "your_youtube_video_id_37",
+          "your_youtube_video_id_38",
+          "your_youtube_video_id_39"
+      ],
+      "language": "Nepali"
+  },
+  {
+      "id": "14",
+      "title": "Organic Pest Control",
+      "description": "Discover natural methods for controlling pests without harming the environment.",
+      "content": "Detailed content about organic pest control...",
+      "videoIds": [
+          "your_youtube_video_id_40",
+          "your_youtube_video_id_41",
+          "your_youtube_video_id_42"
+      ],
+      "language": "Hindi"
+  },
+  {
+      "id": "15",
+      "title": "Agri-Entrepreneurship",
+      "description": "Learn how to start and manage your own agriculture-based business.",
+      "content": "Detailed content about agri-entrepreneurship...",
+      "videoIds": [
+          "your_youtube_video_id_43",
+          "your_youtube_video_id_44",
+          "your_youtube_video_id_45"
+      ],
+      "language": "Marathi"
+  },
+  {
+      "id": "16",
+      "title": "Beekeeping Essentials",
+      "description": "Understand the basics of beekeeping and honey production.",
+      "content": "Detailed content about beekeeping...",
+      "videoIds": [
+          "your_youtube_video_id_46",
+          "your_youtube_video_id_47",
+          "your_youtube_video_id_48"
+      ],
+      "language": "Bengali"
+  },
+  {
+      "id": "17",
+      "title": "Aquaculture Management",
+      "description": "Explore the fundamentals of aquaculture and fish farming techniques.",
+      "content": "Detailed content about aquaculture management...",
+      "videoIds": [
+          "your_youtube_video_id_49",
+          "your_youtube_video_id_50",
+          "your_youtube_video_id_51"
+      ],
+      "language": "Gujarati"
+  },
+  {
+      "id": "18",
+      "title": "Vermicomposting Techniques",
+      "description": "Learn how to use worms to convert organic waste into high-quality compost.",
+      "content": "Detailed content about vermicomposting...",
+      "videoIds": [
+          "your_youtube_video_id_52",
+          "your_youtube_video_id_53",
+          "your_youtube_video_id_54"
+      ],
+      "language": "Tamil"
+  },
+  {
+      "id": "19",
+      "title": "Organic Certification Process",
+      "description": "Understand the steps to get your farm certified as organic.",
+      "content": "Detailed content about organic certification...",
+      "videoIds": [
+          "your_youtube_video_id_55",
+          "your_youtube_video_id_56",
+          "your_youtube_video_id_57"
+      ],
+      "language": "Telugu"
+  },
+  {
+      "id": "20",
+      "title": "Greenhouse Farming",
+      "description": "Learn the basics of greenhouse farming and controlled environment agriculture.",
+      "content": "Detailed content about greenhouse farming...",
+      "videoIds": [
+          "your_youtube_video_id_58",
+          "your_youtube_video_id_59",
+          "your_youtube_video_id_60"
+      ],
+      "language": "Kannada"
+  },
+  {
+      "id": "21",
+      "title": "Soil Microbiology",
+      "description": "Explore the role of microorganisms in soil health and crop production.",
+      "content": "Detailed content about soil microbiology...",
+      "videoIds": [
+          "your_youtube_video_id_61",
+          "your_youtube_video_id_62",
+          "your_youtube_video_id_63"
+      ],
+      "language": "Punjabi"
+  },
+  {
+      "id": "22",
+      "title": "Agroecology",
+      "description": "Understand the principles of agroecology and sustainable farming.",
+      "content": "Detailed content about agroecology...",
+      "videoIds": [
+          "your_youtube_video_id_64",
+          "your_youtube_video_id_65",
+          "your_youtube_video_id_66"
+      ],
+      "language": "Malayalam"
+  },
+  {
+      "id": "23",
+      "title": "Dairy Farming Basics",
+      "description": "Learn the essentials of dairy farming and milk production.",
+      "content": "Detailed content about dairy farming...",
+      "videoIds": [
+          "your_youtube_video_id_67",
+          "your_youtube_video_id_68",
+          "your_youtube_video_id_69"
+      ],
+      "language": "Assamese"
+  },
+  {
+      "id": "24",
+      "title": "Agro-Processing Techniques",
+      "description": "Explore techniques for processing agricultural products into value-added goods.",
+      "content": "Detailed content about agro-processing...",
+      "videoIds": [
+          "your_youtube_video_id_70",
+          "your_youtube_video_id_71",
+          "your_youtube_video_id_72"
+      ],
+      "language": "Odia"
+  },
+  {
+      "id": "25",
+      "title": "Hydroponics Farming",
+      "description": "Learn the science behind soil-less farming using hydroponics systems.",
+      "content": "Detailed content about hydroponics farming...",
+      "videoIds": [
+          "your_youtube_video_id_73",
+          "your_youtube_video_id_74",
+          "your_youtube_video_id_75"
+      ],
+      "language": "Sanskrit"
+  },
+  {
+      "id": "26",
+      "title": "Mushroom Cultivation",
+      "description": "Master the techniques for growing mushrooms commercially.",
+      "content": "Detailed content about mushroom cultivation...",
+      "videoIds": [
+          "your_youtube_video_id_76",
+          "your_youtube_video_id_77",
+          "your_youtube_video_id_78"
+      ],
+      "language": "Nepali"
+  },
+  {
+      "id": "27",
+      "title": "Agri-Finance Basics",
+      "description": "Understand the fundamentals of agricultural finance and credit management.",
+      "content": "Detailed content about agri-finance...",
+      "videoIds": [
+          "your_youtube_video_id_79",
+          "your_youtube_video_id_80",
+          "your_youtube_video_id_81"
+      ],
+      "language": "Hindi"
+  },
+  {
+      "id": "28",
+      "title": "Farm Business Planning",
+      "description": "Learn how to develop a business plan for your farm to ensure profitability.",
+      "content": "Detailed content about farm business planning...",
+      "videoIds": [
+          "your_youtube_video_id_82",
+          "your_youtube_video_id_83",
+          "your_youtube_video_id_84"
+      ],
+      "language": "Marathi"
+  },
+  {
+      "id": "29",
+      "title": "Agri-Tourism Development",
+      "description": "Explore the opportunities of agri-tourism as an additional revenue stream.",
+      "content": "Detailed content about agri-tourism...",
+      "videoIds": [
+          "your_youtube_video_id_85",
+          "your_youtube_video_id_86",
+          "your_youtube_video_id_87"
+      ],
+      "language": "Bengali"
+  },
+  {
+      "id": "30",
+      "title": "Farm Records Management",
+      "description": "Understand the importance of keeping accurate records for farm operations.",
+      "content": "Detailed content about farm records management...",
+      "videoIds": [
+          "your_youtube_video_id_88",
+          "your_youtube_video_id_89",
+          "your_youtube_video_id_90"
+      ],
+      "language": "Gujarati"
+  }
+]
