@@ -21,7 +21,7 @@ export default function MyNavbar() {
     backgroundColor: "rgba(255, 255, 255, 1)",
   });
 
-  const { authUser } = useAuthContext(); // Use AuthContext to get the user info
+  const { authUser } = useAuthContext();
 
   const links1 = [
     { name: "Market Insights", to: "/market-insights" },
@@ -33,11 +33,11 @@ export default function MyNavbar() {
   ];
 
   const links2 = [
-    { name: "Farmer Marketplace", to: "farmermarketplace", isActive: true },
+    { name: "Farmer Marketplace", to: "/farmermarketplace", isActive: true },
     { name: "Chat with Experts", to: "/chat" },
-    {name:'Real Time market', to:'/realtimemarket'},
-    {name:'News', to:'/news'},
-    {name:'Weather', to:'/weather'}
+    { name: "Real Time Market", to: "/realtimemarket" },
+    { name: "News", to: "/news" },
+    { name: "Weather", to: "/weather" }
   ];
 
   useEffect(() => {
@@ -63,19 +63,19 @@ export default function MyNavbar() {
         css={navbarStyle}
       >
         <NavbarBrand className="flex items-center">
-          <p className="font-bold text-inherit text-xl ml-1">
+          <p className="font-bold text-inherit text-lg sm:text-xl ml-1">
             <Link to="/">AgroTrend</Link>
           </p>
         </NavbarBrand>
 
         {/* Desktop Menu */}
-        <NavbarContent className="hidden sm:flex gap-12" justify="center">
+        <NavbarContent className="hidden lg:flex gap-6 xl:gap-8" justify="center">
           {links2.map((link, index) => (
             <NavbarItem key={index} isActive={link.isActive}>
               <Link
                 to={link.to}
                 aria-current={link.isActive ? "page" : undefined}
-                className={`text-lg ${link.isActive ? "text-secondary" : "text-foreground"}`}
+                className={`text-base xl:text-lg ${link.isActive ? "text-secondary" : "text-foreground"} hover:text-blue-600`}
               >
                 {link.name}
               </Link>
@@ -84,26 +84,27 @@ export default function MyNavbar() {
         </NavbarContent>
 
         {/* Mobile Menu Button */}
-        <NavbarContent className="sm:hidden" justify="end">
-          <Button auto onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <NavbarContent className="lg:hidden" justify="end">
+          <Button auto light onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? (
-              <XMarkIcon className="h-6 w-6 text-white" />
+              <XMarkIcon className="h-6 w-6 text-black" />
             ) : (
-              <Bars3Icon className="h-6 w-6 text-white" />
+              <Bars3Icon className="h-6 w-6 text-black" />
             )}
           </Button>
         </NavbarContent>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="sm:hidden absolute top-16 right-0 bg-white shadow-md p-4 w-48 rounded-lg z-50">
+          <div className="lg:hidden absolute top-16 right-0 bg-white shadow-md p-4 w-56 rounded-lg z-50">
             <NavbarContent as="div" className="flex flex-col space-y-4">
               {links1.map((link, index) => (
                 <NavbarItem key={index} isActive={link.isActive}>
                   <Link
                     to={link.to}
                     aria-current={link.isActive ? "page" : undefined}
-                    className={`text-lg ${link.isActive ? "text-secondary" : "text-foreground"}`}
+                    className={`text-base ${link.isActive ? "text-secondary" : "text-foreground"} hover:text-blue-600`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
                   </Link>
@@ -114,10 +115,10 @@ export default function MyNavbar() {
         )}
 
         {/* User Avatar and Dropdown Menu */}
-        <NavbarContent as="div" justify="end" className="hidden sm:flex items-center space-x-4">
+        <NavbarContent as="div" justify="end" className="hidden lg:flex items-center space-x-4">
           {authUser ? (
             <div className="flex items-center space-x-2">
-              <p className="text-lg font-semibold">{authUser.name}</p>
+              <p className="text-base xl:text-lg font-semibold">{authUser.name}</p>
               <Dropdown placement="bottom-end">
                 <DropdownTrigger>
                   <Avatar
@@ -131,43 +132,43 @@ export default function MyNavbar() {
                   />
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Profile Actions" variant="flat">
-                  <DropdownItem key="profile" className="h-14 gap-2 text-lg">
+                  <DropdownItem key="profile" className="h-14 gap-2 text-base xl:text-lg">
                     <p className="font-semibold">Signed in as</p>
                     <p className="font-semibold">{authUser.email}</p>
                   </DropdownItem>
-                  <DropdownItem key="settings" className="text-lg">
+                  <DropdownItem key="settings" className="text-base xl:text-lg">
                     My Settings
                   </DropdownItem>
-                  <DropdownItem key="team_settings" className="text-lg">
+                  <DropdownItem key="team_settings" className="text-base xl:text-lg">
                     Team Settings
                   </DropdownItem>
-                  <DropdownItem key="analytics" className="text-lg">
+                  <DropdownItem key="analytics" className="text-base xl:text-lg">
                     Analytics
                   </DropdownItem>
-                  <DropdownItem key="system" className="text-lg">
+                  <DropdownItem key="system" className="text-base xl:text-lg">
                     System
                   </DropdownItem>
-                  <DropdownItem key="configurations" className="text-lg">
+                  <DropdownItem key="configurations" className="text-base xl:text-lg">
                     Configurations
                   </DropdownItem>
-                  <DropdownItem key="help_and_feedback" className="text-lg">
+                  <DropdownItem key="help_and_feedback" className="text-base xl:text-lg">
                     Help & Feedback
                   </DropdownItem>
-                  <DropdownItem key="logout" color="danger" className="text-lg">
+                  <DropdownItem key="logout" color="danger" className="text-base xl:text-lg">
                     Log Out
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </div>
           ) : (
-            <div className="flex space-x-4">
+            <div className="flex space-x-2 sm:space-x-4">
               <Link to="/login">
-                <Button auto className="bg-blue-600 text-white">
+                <Button auto className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-base">
                   Login
                 </Button>
               </Link>
               <Link to="/signup">
-                <Button auto className="bg-green-600 text-white">
+                <Button auto className="bg-green-600 text-white hover:bg-green-700 text-sm sm:text-base">
                   Sign Up
                 </Button>
               </Link>
