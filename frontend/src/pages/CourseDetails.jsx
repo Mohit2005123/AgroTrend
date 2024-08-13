@@ -28,15 +28,16 @@ const CourseDetails = () => {
           <Accordion>
             {course.videoIds.map((videoId, index) => (
               <AccordionItem key={index} title={`Video ${index + 1}`}>
-                <div className="aspect-w-16 aspect-h-9 mb-4">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title={`${course.title} Video ${index + 1}`}
-                    className="w-full h-full"
-                    allowFullScreen
-                  />
-                </div>
-              </AccordionItem>
+              <div className="mb-4" style={{ height: '500px' }}> {/* Set height to 500px or any value you prefer */}
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title={`${course.title} Video ${index + 1}`}
+                  className="w-full h-full"
+                  allowFullScreen
+                />
+              </div>
+            </AccordionItem>
+            
             ))}
           </Accordion>
         </div>

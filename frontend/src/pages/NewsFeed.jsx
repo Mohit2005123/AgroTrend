@@ -34,15 +34,22 @@ const NewsFeed = () => {
         {error && <p className="text-red-500">{error}</p>}
         <div className="space-y-6">
           {newsData.map((item, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden flex items-center">
               <a
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 hover:bg-gray-100 transition duration-300"
+                className="flex-grow p-6 hover:bg-gray-100 transition duration-300"
               >
                 <h2 className="text-xl font-semibold text-blue-600">{item.text}</h2>
               </a>
+              {item.imgSrc && (
+                <img
+                  src={item.imgSrc}
+                  alt={item.text}
+                  className="w-24 h-24 object-cover rounded-r-lg"
+                />
+              )}
             </div>
           ))}
         </div>

@@ -19,8 +19,6 @@ const fetchData = async () => {
 
         // Initialize an array to store the data
         const dataArray = [];
-
-        // Loop through each element with class 'listingNew' inside the 'listview' div
         listView.find('.listingNew').each((index, element) => {
             const anchorTag = $(element).find('a'); // Find the anchor tag inside the div
             const href = anchorTag.attr('href'); // Get the href attribute
@@ -32,9 +30,10 @@ const fetchData = async () => {
 
             // Remove the "Premium" label if it exists in the text
             text = text.replace('Premium', '').trim();
-
-            // Store the full URL and cleaned text in an object and push it to the array
-            dataArray.push({ href: fullUrl, text });
+            const thumbnailDiv = $(element).find('.thumbnail');
+            const imgTag = thumbnailDiv.find('img');
+            const imgSrc = imgTag.attr('src');
+            dataArray.push({ href: fullUrl, text, imgSrc });
         });
 
         // Log the array containing hrefs and texts

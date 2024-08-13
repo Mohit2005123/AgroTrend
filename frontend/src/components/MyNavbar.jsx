@@ -14,7 +14,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
-
+import Title from '../assets/Title.svg';
 export default function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarStyle, setNavbarStyle] = useState({
@@ -62,10 +62,11 @@ export default function MyNavbar() {
         className="fixed top-0 left-0 right-0 z-50 shadow-md"
         css={navbarStyle}
       >
-        <NavbarBrand className="flex items-center">
-          <p className="font-bold text-inherit text-lg sm:text-xl ml-1">
-            <Link to="/">AgroTrend</Link>
-          </p>
+       <NavbarBrand className="flex items-center">
+          {/* Replace text with SVG logo */}
+          <Link to="/">
+            <img src={Title} alt="AgroTrend Logo" className="h-24 sm:h-28" />
+          </Link>
         </NavbarBrand>
 
         {/* Desktop Menu */}

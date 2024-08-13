@@ -17,11 +17,11 @@
       "description": "Explore advanced techniques in crop management and increase your yield.",
       "content": "Detailed content about crop management...",
       "videoIds": [
-          "https://www.youtube.com/watch?v=v1DT4yvxpMw&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50",
-          "https://www.youtube.com/watch?v=g0wkT3mf80U&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50",
-          "https://www.youtube.com/watch?v=r9drn845b9o&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50"
+          "v1DT4yvxpMw",
+          "g0wkT3mf80U",
+          "r9drn845b9o"
       ],
-      "language": "Marathi"
+      "language": "English"
   },
   {
       "id": "3",
