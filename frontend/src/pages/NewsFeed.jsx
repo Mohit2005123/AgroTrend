@@ -14,7 +14,7 @@ const NewsFeed = () => {
       try {
         const response = await axios.post('/api/news/');
         console.log(response.data);
-        setNewsData(response.data.newsData);
+        setNewsData(response.data);
       } catch (error) {
         setError(error.message);
       } finally {
