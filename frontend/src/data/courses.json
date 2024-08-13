@@ -5,9 +5,9 @@
       "description": "Learn the basics of organic farming, including soil health and pest management.",
       "content": "Detailed content about organic farming...",
       "videoIds": [
-          "your_youtube_video_id_1",
-          "your_youtube_video_id_2",
-          "your_youtube_video_id_3"
+          "https://youtu.be/WhOrIUlrnPo",
+          "https://youtu.be/_-hBHUTQJpg",
+          "https://youtu.be/S9-qUPvArjA"
       ],
       "language": "Hindi"
   },
@@ -17,9 +17,9 @@
       "description": "Explore advanced techniques in crop management and increase your yield.",
       "content": "Detailed content about crop management...",
       "videoIds": [
-          "your_youtube_video_id_4",
-          "your_youtube_video_id_5",
-          "your_youtube_video_id_6"
+          "https://www.youtube.com/watch?v=v1DT4yvxpMw&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50",
+          "https://www.youtube.com/watch?v=g0wkT3mf80U&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50",
+          "https://www.youtube.com/watch?v=r9drn845b9o&pp=ygUYQWR2YW5jZWQgQ3JvcCBNYW5hZ2VtZW50"
       ],
       "language": "Marathi"
   },
