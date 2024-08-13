@@ -33,9 +33,11 @@ export default function MyNavbar() {
   ];
 
   const links2 = [
-    { name: "Home", to: "/" },
-    { name: "Market Data", to: "/market-data", isActive: true },
+    { name: "Farmer Marketplace", to: "farmermarketplace", isActive: true },
     { name: "Chat with Experts", to: "/chat" },
+    {name:'Real Time market', to:'/realtimemarket'},
+    {name:'News', to:'/news'},
+    {name:'Weather', to:'/weather'}
   ];
 
   useEffect(() => {
@@ -61,13 +63,13 @@ export default function MyNavbar() {
         css={navbarStyle}
       >
         <NavbarBrand className="flex items-center">
-          <p className="font-bold text-inherit text-xl ml-2">
+          <p className="font-bold text-inherit text-xl ml-1">
             <Link to="/">AgroTrend</Link>
           </p>
         </NavbarBrand>
 
         {/* Desktop Menu */}
-        <NavbarContent className="hidden sm:flex gap-10" justify="center">
+        <NavbarContent className="hidden sm:flex gap-12" justify="center">
           {links2.map((link, index) => (
             <NavbarItem key={index} isActive={link.isActive}>
               <Link

@@ -27,12 +27,11 @@ export default function App() {
     setTimeout(() => setIsRotating(false), 500); // Reset rotation after 1s
     setChatBotVisible(!chatBotVisible);
   };
-
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/farmermarketplace" element={<Marketplace />} />
+        <Route path="/farmermarketplace" element={<Marketplace  />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/news" element={<NewsFeed />} />

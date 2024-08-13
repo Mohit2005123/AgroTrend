@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@nextui-org/react';
 import { FaRegChartBar } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
+import { Link } from 'react-router-dom'; // Import this if you're using react-router
 
 function Hero() {
     return (
@@ -24,9 +25,23 @@ function Hero() {
                 <p className="text-lg md:text-2xl mb-6 animate-fade-in animation-delay-1">
                     Get access to up-to-date market information, price trends, and tools to negotiate better deals.
                 </p>
-                <Button color="primary" size="lg" className="bg-white text-green-600 animate-bounce">
-                    Get Started
-                </Button>
+                <Link to="/get-started">
+                    <Button color="primary" size="lg" className="bg-white text-green-600 animate-bounce mb-4">
+                        Get Started
+                    </Button>
+                </Link>
+                <div className="flex justify-center space-x-4 animate-fade-in animation-delay-2">
+                    <Link to="/resources">
+                        <Button color="primary" size="lg" className="bg-white text-green-600">
+                            Resources
+                        </Button>
+                    </Link>
+                    <Link to="/community">
+                        <Button color="primary" size="lg" className="bg-white text-green-600">
+                            Community
+                        </Button>
+                    </Link>
+                </div>
                 <div className="mt-8 animate-fade-in animation-delay-2">
                     <FaRegChartBar size={48} />
                 </div>
