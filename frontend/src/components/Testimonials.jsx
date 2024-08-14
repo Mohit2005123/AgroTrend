@@ -196,55 +196,65 @@ const testimonials = [
   },
 ];
 
-
 const Testimonials = () => {
+  // Number of testimonials per column
+  const testimonialsPerColumn = 3;
+
+  // Split testimonials into columns
+  const columns = Array.from({ length: Math.ceil(testimonials.length / testimonialsPerColumn) }, (_, index) => 
+    testimonials.slice(index * testimonialsPerColumn, index * testimonialsPerColumn + testimonialsPerColumn)
+  );
+
   return (
-    <div className="bg-white text-black p-8 relative overflow-hidden">
-      <h2 className="text-3xl font-bold mb-4 text-center">Loved by thousands of farmers</h2>
-      <p className="text-center mb-8">Here's what some of our users have to say about AgriPulse.</p>
-      <div className="relative overflow-hidden h-[1000px]">
+    <div className="bg-gray-800 text-white p-8 relative overflow-hidden">
+      <h2 className="text-3xl font-bold mb-4 text-center text-green-300">Loved by thousands of farmers</h2>
+      <p className="text-center mb-8 text-gray-300">Here's what some of our users have to say about AgriPulse.</p>
+      <div className="relative overflow-hidden h-[500px]"> {/* Adjust height as needed */}
         <motion.div
-          className="absolute top-0 left-0 right-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="absolute top-0 left-0 right-0 grid grid-cols-1 md:grid-cols-3 gap-6"
           animate={{ y: ['0%', '-100%'] }}
           transition={{
-            duration: 150, // Slower animation duration
+            duration: 50, // Adjust animation duration for desired speed
             repeat: Infinity,
             ease: 'linear',
           }}
         >
-          {testimonials.concat(testimonials).map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white p-4 rounded-lg shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <img
-                  className="w-10 h-10 rounded-full mr-4"
-                  src={`https://via.placeholder.com/40?text=${testimonial.name.charAt(0)}`}
-                  alt={testimonial.name}
-                />
-                <div>
-                  <h3 className="text-lg font-bold text-gray-800">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">{testimonial.handle}</p>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4">{testimonial.text}</p>
-              {testimonial.link && (
-                <a
-                  href={`https://${testimonial.link}`}
-                  className="text-blue-500 hover:underline"
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className="space-y-6">
+              {column.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900 p-4 rounded-lg shadow-lg"
                 >
-                  {testimonial.link}
-                </a>
-              )}
+                  <div className="flex items-center mb-4">
+                    <img
+                      className="w-10 h-10 rounded-full mr-4"
+                      src={`https://via.placeholder.com/40?text=${testimonial.name.charAt(0)}`}
+                      alt={testimonial.name}
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold text-green-400">{testimonial.name}</h3>
+                      <p className="text-sm text-gray-400">{testimonial.handle}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4">{testimonial.text}</p>
+                  {testimonial.link && (
+                    <a
+                      href={`https://${testimonial.link}`}
+                      className="text-green-300 hover:underline"
+                    >
+                      {testimonial.link}
+                    </a>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </motion.div>
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-gray-800 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-800 to-transparent" />
       </div>
     </div>
   );
 };
-
 export default Testimonials;

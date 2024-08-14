@@ -25,15 +25,15 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact py-12 px-6 md:py-24 md:px-12 bg-gray-100">
+    <section className="contact py-12 px-6 md:py-24 md:px-12 bg-gray-900">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-300">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <Card className="form-container p-8 shadow-md" variant="bordered">
-            <h3 className="text-xl font-semibold mb-4">Send us a message</h3>
+          <Card className="form-container p-8 bg-green-800 text-white shadow-md" variant="bordered">
+            <h3 className="text-xl font-semibold mb-4 text-green-200">Send us a message</h3>
             {isSubmitted ? (
-              <p className="text-green-600">Thank you for contacting us! We'll get back to you soon.</p>
+              <p className="text-green-400">Thank you for contacting us! We'll get back to you soon.</p>
             ) : (
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
@@ -47,6 +47,7 @@ export default function Contact() {
                     placeholder="Your Name"
                     required
                     size="lg"
+                    className="bg-green-700 text-black border-green-600"
                   />
                 </div>
                 <div className="mb-4">
@@ -60,6 +61,7 @@ export default function Contact() {
                     placeholder="Your Email"
                     required
                     size="lg"
+                    className="bg-green-700 text-black border-green-600"
                   />
                 </div>
                 <div className="mb-4">
@@ -73,12 +75,12 @@ export default function Contact() {
                     required
                     rows={4}
                     size="lg"
+                    className="bg-green-700 text-black border-green-600"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full"
-                  color="primary"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
                   size="lg"
                 >
                   Send Message
@@ -88,21 +90,21 @@ export default function Contact() {
           </Card>
 
           {/* Contact Details */}
-          <Card className="contact-details p-8 shadow-md" variant="bordered">
-            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-            <p className="mb-4">Feel free to reach out to us through any of the following methods:</p>
+          <Card className="contact-details p-8 bg-green-800 text-white shadow-md" variant="bordered">
+            <h3 className="text-xl font-semibold mb-4 text-green-200">Get in Touch</h3>
+            <p className="mb-8">Feel free to reach out to us through any of the following methods:</p>
             <ul className="list-disc list-inside">
               <li className="mb-2">
-                <strong>Address:</strong> 456 Farm Lane, Agrocity, Maharashtra 411001, India
+                <strong className="text-green-400">Address:</strong> 456 Farm Lane, Agrocity, Maharashtra 411001, India
               </li>
               <li className="mb-2">
-                <strong>Phone:</strong> +91 (22) 1234-5678
+                <strong className="text-green-400">Phone:</strong> +91 (22) 1234-5678
               </li>
               <li className="mb-2">
-                <strong>Email:</strong> support@agripulse.com
+                <strong className="text-green-400">Email:</strong> support@agripulse.com
               </li>
               <li className="mb-2">
-                <strong>Fax:</strong> +91 (22) 8765-4321
+                <strong className="text-green-400">Fax:</strong> +91 (22) 8765-4321
               </li>
             </ul>
           </Card>
