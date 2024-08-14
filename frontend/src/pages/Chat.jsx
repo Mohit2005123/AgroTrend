@@ -71,7 +71,7 @@ const Chat = () => {
                                     selectedUser === user.name ? 'bg-gray-300' : ''
                                 }`}
                             >
-                                <img src={user.avatar} alt={user.name} className="w-12 h-12 rounded-full mr-3" />
+                                <img src='https://avatar.iran.liara.run/public' alt={user.name} className="w-12 h-12 rounded-full mr-3" />
                                 <div>
                                     <p className="font-semibold">{user.name}</p>
                                     <p className={`text-sm ${user.status === 'online' ? 'text-green-500' : 'text-gray-500'}`}>

@@ -1,28 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
+import marketData from '../data/marketData.json';
 import MyNavbar from '../components/MyNavbar';
 import Footer from '../components/Footer';
-import MarketItem from '../components/MarketItem';
-import marketData from '../data/marketData.json';
 
 const RealTimeMarket = () => {
+  const [selectedTicker, setSelectedTicker] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+
+  const handleTickerChange = (event) => {
+    setSelectedTicker(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const result = marketData.filter(item => item.ticker === selectedTicker);
+    setFilteredData(result);
+  };
+
+  const uniqueTickers = [...new Set(marketData.map(item => item.ticker))];
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <MyNavbar />
-      <main className="flex-grow mt-16 p-6 bg-gray-100"> {/* Adjust mt-16 based on your navbar height */}
-        <h1 className="text-3xl font-bold text-green-700 mb-6">Agricultural Market Prices</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {marketData.map((item, index) => (
-            <MarketItem
-              key={index}
-              ticker={item.ticker}
-              market={item.market}
-              maxPrice={item.maxPrice}
-              minPrice={item.minPrice}
-            />
-          ))}
-        </div>
-      </main>
-      <Footer />
+    <div>
+      <MyNavbar />  {/* Navbar added here */}
+      <div className="p-8">
+        <h1 className="text-2xl font-bold mb-4">Real-Time Market Prices</h1>
+        <form onSubmit={handleSubmit} className="mb-4">
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Select Ticker:
+          </label>
+          <select
+            value={selectedTicker}
+            onChange={handleTickerChange}
+            className="w-full p-2 border border-gray-300 rounded-md"
+          >
+            <option value="" disabled>Select a ticker</option>
+            {uniqueTickers.map((ticker, index) => (
+              <option key={index} value={ticker}>
+                {ticker}
+              </option>
+            ))}
+          </select>
+          <button
+            type="submit"
+            className="mt-4 w-full bg-blue-500 text-white p-2 rounded-md"
+          >
+            Submit
+          </button>
+        </form>
+
+        {filteredData.length > 0 && (
+          <div>
+            <h2 className="text-xl font-semibold mb-2">Prices for {selectedTicker}:</h2>
+            <ul className="space-y-2">
+              {filteredData.map((item, index) => (
+                <li key={index} className="p-4 border rounded-md shadow">
+                  <p><strong>Market:</strong> {item.market}</p>
+                  <p><strong>Max Price:</strong> {item.maxPrice}</p>
+                  <p><strong>Min Price:</strong> {item.minPrice}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      <Footer />  {/* Footer added here */}
     </div>
   );
 };
