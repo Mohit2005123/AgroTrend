@@ -20,18 +20,20 @@ const RealTimeMarket = () => {
   const uniqueTickers = [...new Set(marketData.map(item => item.ticker))];
 
   return (
-    <div>
-      <MyNavbar />  {/* Navbar added here */}
-      <div className="p-8">
-        <h1 className="text-2xl font-bold mb-4">Real-Time Market Prices</h1>
-        <form onSubmit={handleSubmit} className="mb-4">
-          <label className="block mb-2 text-sm font-medium text-gray-700">
+    <div className="bg-gray-900 min-h-screen flex flex-col text-white"> {/* Ensure text is white */}
+      <MyNavbar />
+      <div className="flex-grow p-8 mt-16">
+        <h1 className="text-3xl font-bold mb-6 text-center transition duration-500 ease-in-out transform hover:scale-105">
+          Real-Time Market Prices
+        </h1>
+        <form onSubmit={handleSubmit} className="mb-6 max-w-lg mx-auto">
+          <label className="block mb-2 text-lg font-medium">
             Select Ticker:
           </label>
           <select
             value={selectedTicker}
             onChange={handleTickerChange}
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full p-3 border border-gray-700 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out"
           >
             <option value="" disabled>Select a ticker</option>
             {uniqueTickers.map((ticker, index) => (
@@ -42,18 +44,20 @@ const RealTimeMarket = () => {
           </select>
           <button
             type="submit"
-            className="mt-4 w-full bg-blue-500 text-white p-2 rounded-md"
+            className="mt-4 w-full bg-green-600 text-white p-3 rounded-md hover:bg-green-500 transition duration-300 ease-in-out transform hover:scale-105"
           >
             Submit
           </button>
         </form>
 
         {filteredData.length > 0 && (
-          <div>
-            <h2 className="text-xl font-semibold mb-2">Prices for {selectedTicker}:</h2>
-            <ul className="space-y-2">
+          <div className="max-w-xl mx-auto bg-gray-800 p-6 rounded-md shadow-lg transition duration-500 ease-in-out transform hover:scale-105">
+            <h2 className="text-2xl font-semibold text-green-400 mb-4 text-center">
+              Prices for {selectedTicker}:
+            </h2>
+            <ul className="space-y-4">
               {filteredData.map((item, index) => (
-                <li key={index} className="p-4 border rounded-md shadow">
+                <li key={index} className="p-4 bg-gray-700 border border-gray-600 rounded-md shadow transition duration-300 ease-in-out transform hover:bg-green-600 hover:text-white">
                   <p><strong>Market:</strong> {item.market}</p>
                   <p><strong>Max Price:</strong> {item.maxPrice}</p>
                   <p><strong>Min Price:</strong> {item.minPrice}</p>
@@ -63,7 +67,7 @@ const RealTimeMarket = () => {
           </div>
         )}
       </div>
-      <Footer />  {/* Footer added here */}
+      <Footer />
     </div>
   );
 };
