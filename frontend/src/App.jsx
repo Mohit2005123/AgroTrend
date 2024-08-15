@@ -16,6 +16,9 @@ import { Toaster } from 'react-hot-toast';
 import { useAuthContext } from './context/AuthContext';
 import ChatBot from './components/ChatBot';
 import { FiMessageSquare } from 'react-icons/fi';
+import FileUploadPage from './pages/FileUploadPage';
+import Form from './pages/Form';
+import Result from './pages/Result';
 
 export default function App() {
   const { authUser } = useAuthContext();
@@ -42,6 +45,9 @@ export default function App() {
         <Route path="/realtimemarket" element={<RealTimeMarket />} />
         <Route path="/login" element={authUser ? <Navigate to='/' /> : <Login />} />
         <Route path="/signup" element={authUser ? <Navigate to='/' /> : <Signup />} />
+        <Route path="/fileupload" element={<FileUploadPage />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/results" element={<Result/>} />
       </Routes>
       <Toaster />
 
