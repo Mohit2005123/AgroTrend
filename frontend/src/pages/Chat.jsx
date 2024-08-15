@@ -92,7 +92,7 @@ const Chat = () => {
                                     className={`flex ${chat.type === 'incoming' ? 'justify-start' : 'justify-end'}`}
                                 >
                                     <div
-                                        className={`p-3 rounded-lg ${chat.type === 'incoming' ? 'bg-gray-600' : 'bg-green-600 text-white'}`}
+                                        className={`p-3 rounded-lg ${chat.type === 'incoming' ? 'bg-gray-600 text-white' : 'bg-green-600 text-white'}`}
                                     >
                                         {chat.text}
                                     </div>
