@@ -25,9 +25,9 @@ function Hero() {
                 <p className="text-lg md:text-2xl mb-6 animate-fade-in animation-delay-1">
                     Get access to up-to-date market information, price trends, and tools to negotiate better deals.
                 </p>
-                <Link to="/get-started">
+                <Link to="/fileupload">
                     <Button color="primary" size="lg" className="bg-green-400 text-white hover:bg-green-500 animate-bounce mb-4">
-                        Get Started
+                        Free Virtual Soil Check
                     </Button>
                 </Link>
                 <div className="flex justify-center space-x-4 animate-fade-in animation-delay-2">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import MyNavbar from '../components/MyNavbar';
 import Footer from '../components/Footer';
 
@@ -14,6 +15,8 @@ export default function Form() {
     extraData: '',
   });
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -22,6 +25,9 @@ export default function Form() {
     e.preventDefault();
     console.log(formData);
     // Handle form submission here
+
+    // Redirect to another page after submission
+    navigate('/results'); // Replace '/thank-you' with the path you want to navigate to
   };
 
   return (
@@ -187,4 +193,3 @@ export default function Form() {
     </div>
   );
 }
-
