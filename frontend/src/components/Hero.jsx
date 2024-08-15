@@ -25,22 +25,36 @@ function Hero() {
                 <p className="text-lg md:text-2xl mb-6 animate-fade-in animation-delay-1">
                     Get access to up-to-date market information, price trends, and tools to negotiate better deals.
                 </p>
-                <Link to="/fileupload">
-                    <Button color="primary" size="lg" className="bg-green-400 text-white hover:bg-green-500 animate-bounce mb-4">
-                        Free Virtual Soil Check
-                    </Button>
-                </Link>
-                <div className="flex justify-center space-x-4 animate-fade-in animation-delay-2">
-                    <Link to="/resources">
-                        <Button color="primary" size="lg" className="bg-green-400 text-white hover:bg-green-500">
-                            Resources
+                <div className="flex flex-col items-center space-y-4 mt-8">
+                    <Link to="/fileupload">
+                        <Button
+                            color="primary"
+                            size="lg"
+                            className="bg-green-400 text-black font-bold hover:bg-green-500 text-xl py-4 px-8 animate-bounce"
+                        >
+                            Free Virtual Soil Check
                         </Button>
                     </Link>
-                    <Link to="/community">
-                        <Button color="primary" size="lg" className="bg-green-400 text-white hover:bg-green-500">
-                            Community
-                        </Button>
-                    </Link>
+                    <div className="flex space-x-4 mt-6">
+                        <Link to="/resources">
+                            <Button
+                                color="primary"
+                                size="lg"
+                                className="bg-green-400 text-black font-bold hover:bg-green-500 text-lg py-3 px-6"
+                            >
+                                Resources
+                            </Button>
+                        </Link>
+                        <Link to="/community">
+                            <Button
+                                color="primary"
+                                size="lg"
+                                className="bg-green-400 text-black font-bold hover:bg-green-500 text-lg py-3 px-6"
+                            >
+                                Community
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="mt-8 animate-fade-in animation-delay-2">
                     <FaRegChartBar size={48} className="text-green-300" />
