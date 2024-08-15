@@ -68,7 +68,7 @@ const Chat = () => {
                                     selectedUser === user.name ? 'bg-gray-500' : ''
                                 }`}
                             >
-                                <img src='https://avatar.iran.liara.run/public' alt={user.name} className="w-12 h-12 rounded-full mr-3" />
+                                <img src={user.avatar} alt={user.name} className="w-12 h-12 rounded-full mr-3" />
                                 <div>
                                     <p className="font-semibold">{user.name}</p>
                                     <p className={`text-sm ${user.status === 'online' ? 'text-green-400' : 'text-gray-400'}`}>
@@ -92,7 +92,7 @@ const Chat = () => {
                                     className={`flex ${chat.type === 'incoming' ? 'justify-start' : 'justify-end'}`}
                                 >
                                     <div
-                                        className={`p-3 rounded-lg ${chat.type === 'incoming' ? 'bg-gray-600 text-white' : 'bg-green-600 text-white'}`}
+                                        className={`p-3 rounded-lg ${chat.type === 'incoming' ? 'bg-gray-600' : 'bg-green-600 text-white'}`}
                                     >
                                         {chat.text}
                                     </div>
