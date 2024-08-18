@@ -1,16 +1,21 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import MyNavbar from '../components/MyNavbar';
 import Footer from '../components/Footer';
 import products from '../data/products.json';
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const product = products.find((p) => p.id === parseInt(id, 10));
 
   if (!product) {
     return <div>Product not found</div>;
   }
+
+  const handleChatClick = () => {
+    navigate('/chat');
+  };
 
   return (
     <div>
@@ -33,7 +38,10 @@ const ProductDetail = () => {
               <p className="text-gray-600 mb-2"><strong>SKU:</strong> {product.sku}</p>
             </div>
 
-            <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+            <button
+              onClick={handleChatClick}
+              className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+            >
               Chat with the Seller
             </button>
           </div>
