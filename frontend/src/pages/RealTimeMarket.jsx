@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import marketData from '../data/marketData.json';
 import MyNavbar from '../components/MyNavbar';
 import Footer from '../components/Footer';
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import { Bar, Pie, Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 
@@ -25,7 +25,6 @@ const RealTimeMarket = () => {
 
   const uniqueTickers = [...new Set(marketData.map(item => item.ticker))];
 
-  // Ensure that filteredData has date and price fields for charts
   const pricesData = filteredData.map(item => ({
     market: item.market,
     maxPrice: parseFloat(item.maxPrice),
@@ -81,29 +80,17 @@ const RealTimeMarket = () => {
     ],
   };
 
-  // Fake data for Line Chart
-  const fakePriceTrendsData = [
-    { date: '2024-08-10T00:00:00Z', price: 175.00 },
-    { date: '2024-08-11T00:00:00Z', price: 180.00 },
-    { date: '2024-08-12T00:00:00Z', price: 185.00 },
-    { date: '2024-08-13T00:00:00Z', price: 190.00 },
-    { date: '2024-08-14T00:00:00Z', price: 195.00 },
-    { date: '2024-08-15T00:00:00Z', price: 200.00 }
-  ];
-
-  // Line Chart Data
+  // Historical Price Trends Data
   const lineChartData = {
-    labels: fakePriceTrendsData.map(item => new Date(item.date).toLocaleDateString()),
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], // Example months
     datasets: [
       {
-        label: 'Price Trend',
-        data: fakePriceTrendsData.map(item => ({
-          x: new Date(item.date),
-          y: item.price
-        })),
+        label: 'Historical Price',
+        data: [120, 135, 125, 145, 155, 160, 150], // Example data
         borderColor: 'rgba(34, 197, 94, 1)',
         backgroundColor: 'rgba(34, 197, 94, 0.2)',
         fill: true,
+        tension: 0.3,
       },
     ],
   };
@@ -112,9 +99,9 @@ const RealTimeMarket = () => {
   const columns = [
     { header: 'Market', accessor: 'market' },
     { header: 'Date', accessor: 'date' },
-    { header: 'Max Price', accessor: 'maxPrice' },
-    { header: 'Min Price', accessor: 'minPrice' },
-    { header: 'Price', accessor: 'price' },
+    { header: 'Max Price (₹)', accessor: 'maxPrice' },
+    { header: 'Min Price (₹)', accessor: 'minPrice' },
+    { header: 'Price (₹)', accessor: 'price' },
   ];
 
   // Function to format data values
@@ -122,7 +109,7 @@ const RealTimeMarket = () => {
     if (isDate) {
       return value instanceof Date ? value.toLocaleDateString() : 'N/A';
     }
-    return typeof value === 'number' ? value.toFixed(2) : value;
+    return typeof value === 'number' ? `₹${value.toFixed(2)}` : value;
   };
 
   return (
@@ -173,7 +160,7 @@ const RealTimeMarket = () => {
                     },
                     tooltip: {
                       callbacks: {
-                        label: (context) => `${context.dataset.label}: $${context.raw.toFixed(2)}`,
+                        label: (context) => `${context.dataset.label}: ₹${context.raw.toFixed(2)}`,
                       },
                     },
                   },
@@ -190,10 +177,10 @@ const RealTimeMarket = () => {
               />
             </div>
 
-            {/* Line Chart */}
+            {/* Historical Price Trends (Fake Data) */}
             <div className="bg-gray-800 p-6 rounded-md shadow-lg transition duration-500 ease-in-out transform hover:scale-105">
               <h2 className="text-2xl font-semibold text-green-400 mb-4 text-center">
-                Historical Price Trend
+                Historical Price Trends
               </h2>
               <Line
                 data={lineChartData}
@@ -205,30 +192,15 @@ const RealTimeMarket = () => {
                     },
                     tooltip: {
                       callbacks: {
-                        label: (context) => `Price: $${context.raw.y.toFixed(2)}`,
+                        label: (context) => `Price: ₹${context.raw.toFixed(2)}`,
                       },
                     },
                   },
                   scales: {
                     x: {
-                      type: 'time',
-                      time: {
-                        unit: 'day',
-                        tooltipFormat: 'll', // Adjust tooltip format if needed
-                      },
-                      title: {
-                        display: true,
-                        text: 'Date',
-                      },
-                      ticks: {
-                        source: 'auto',
-                      },
+                      type: 'category',
                     },
                     y: {
-                      title: {
-                        display: true,
-                        text: 'Price',
-                      },
                       beginAtZero: true,
                     },
                   },
@@ -251,7 +223,7 @@ const RealTimeMarket = () => {
                     },
                     tooltip: {
                       callbacks: {
-                        label: (context) => `${context.label}: $${context.raw.toFixed(2)}`,
+                        label: (context) => `${context.label}: ₹${context.raw.toFixed(2)}`,
                       },
                     },
                   },
@@ -275,11 +247,17 @@ const RealTimeMarket = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {pricesData.map((data, index) => (
-                    <tr key={index}>
-                      {columns.map((col, index) => (
-                        <td key={index} className="border border-gray-600 p-2">
-                          {formatValue(data[col.accessor], col.accessor === 'date')}
+                  {filteredData.map((item, rowIndex) => (
+                    <tr key={rowIndex}>
+                      {columns.map((col, colIndex) => (
+                        <td
+                          key={colIndex}
+                          className="border border-gray-600 p-2"
+                        >
+                          {formatValue(
+                            item[col.accessor],
+                            col.accessor === 'date'
+                          )}
                         </td>
                       ))}
                     </tr>
